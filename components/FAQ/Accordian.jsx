@@ -26,9 +26,9 @@ const Accordian = ({
 
             <div className='flex items-center justify-between w-full py-5 cursor-pointer' onClick={() => toggle(index)}>
                 {
-                    <h6 className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-[86%]'>
+                    <h3 className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-[86%]'>
                         {question}
-                    </h6>
+                    </h3>
                 }
 
                 <button
