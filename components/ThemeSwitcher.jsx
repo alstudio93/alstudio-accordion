@@ -10,9 +10,9 @@ const ThemeSwitcher = () => {
     useEffect(() => setOnComponentMount(true), []);
     const themeIcon = () => {
         if (onComponentMount && resolvedTheme === "dark") {
-            return <HiOutlineSun className='lg:text-2xl' title="Dark Mode"  />
+            return <HiOutlineSun className='light-mode-btn lg:text-2xl' title="Dark Mode"  />
         } else {
-            return <MdOutlineDarkMode className='lg:text-2xl' title="Light Mode"  />
+            return <MdOutlineDarkMode className='dark-mode-btn lg:text-2xl' title="Light Mode"  />
         }
     }
     return (
