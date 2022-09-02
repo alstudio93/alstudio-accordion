@@ -23,7 +23,7 @@ const Trivia = () => {
     const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
     return (
         <>
-            <section id="trivia" tabIndex="0" className='w-full pt-10 mx-auto max-w-section'>
+            <section id="trivia" tabIndex="0" className='px-2 pt-10'>
                 <h2 className='text-transparent bg-clip-text bg-gradient-to-br
                 from-[#e1e1e1] to-[#00a0c4] font-quicksand text-h1
                 text-center font-medium'>Schitt&#39;s Creek Trivia</h2>
@@ -32,7 +32,7 @@ const Trivia = () => {
                         <div
                             tabIndex="0"
                             key={trivia.question}
-                            className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg accordion gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'
+                            className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'
                         >
 
                             <div className='flex items-center justify-between w-full py-5 cursor-pointer'
