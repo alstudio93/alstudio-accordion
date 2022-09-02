@@ -19,25 +19,21 @@ const Trivia = () => {
         }
     }
 
-    const accordionClosed = "hidden rounded-2xl overflow-y-hidden max-w-6xl leading-snug opacity-0"
-    const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
     return (
         <>
-            <section id="trivia" tabIndex="0" className='w-full pt-10 mx-auto max-w-section'>
-                <h2 className='text-transparent bg-clip-text bg-gradient-to-br
-                from-[#e1e1e1] to-[#00a0c4] font-quicksand text-h1
-                text-center font-medium'>Schitt&#39;s Creek Trivia</h2>
+            <section id="trivia" tabIndex="0">
+                <h2 >Schitt&#39;s Creek Trivia</h2>
                 {
                     TriviaQuestion.map((trivia, index) => (
                         <div
                             tabIndex="0"
                             key={trivia.question}
-                            className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg accordion gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'
+                            className='accordion'
                         >
 
-                            <div className='flex items-center justify-between w-full py-5 cursor-pointer'
+                            <div className='accordion-question'
                                 onClick={() => revealAnswer(index)}>
-                                    <h3 className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-[86%]'>
+                                    <h3>
                                     {trivia.question}
                                     </h3>
                                 <button aria-expanded={isClicked === index ? 'true' : false}>
@@ -46,9 +42,8 @@ const Trivia = () => {
                             </div>
 
                             {
-                                <div className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}                                >
-                                    <p className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
-
+                                <div className={isClicked === index ? "accordion-open" : "accordion-closed"}>
+                                    <p>{trivia.answer}</p>
                                 </div>
                             }
 

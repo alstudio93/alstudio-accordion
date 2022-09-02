@@ -10,16 +10,15 @@ const ThemeSwitcher = () => {
     useEffect(() => setOnComponentMount(true), []);
     const themeIcon = () => {
         if (onComponentMount && resolvedTheme === "dark") {
-            return <HiOutlineSun className='light-mode-btn lg:text-2xl' title="Dark Mode"  />
+            return <HiOutlineSun className='light-mode-btn' title="Toggle Light Mode"  />
         } else {
-            return <MdOutlineDarkMode className='dark-mode-btn lg:text-2xl' title="Light Mode"  />
+            return <MdOutlineDarkMode className='dark-mode-btn' title=" Toggle Dark Mode"  />
         }
     }
     return (
         <button
-            aria-label="Toggle Dark Mode"
             type="button"
-            className="flex items-center justify-center w-8 h-8 mx-auto transition-all bg-gray-200 rounded-lg md:w-12 md:h-12 dark:bg-gray-600 hover:ring-2 ring-gray-300 "
+            className="theme-switcher "
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
             {themeIcon()}
