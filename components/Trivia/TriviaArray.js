@@ -19,5 +19,4 @@ export const TriviaQuestion = [
         question: "What's the name of the soap opera that Moira Rose is best known for?",
         answer: "Sunrise Bay"
     },
-
 ]

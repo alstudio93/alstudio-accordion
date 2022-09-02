@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import FAQ from '../components/FAQ'
+import Trivia from '../components/Trivia'
 import Footer from '../components/Footer'
 import ThemeSwitcher from '../components/ThemeSwitcher'
 
@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className='py-20'>
         <ThemeSwitcher />
-        <FAQ />
+        <Trivia />
       </main>
       <Footer />
     </>
