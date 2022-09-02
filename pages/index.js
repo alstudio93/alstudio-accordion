@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='py-20'>
+      <main>
         <ThemeSwitcher />
         <Trivia />
       </main>
