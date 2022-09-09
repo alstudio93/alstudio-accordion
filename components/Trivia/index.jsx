@@ -13,11 +13,16 @@ const Trivia = () => {
 
     const toggleBtn = (index) => {
         if (isClicked === index) {
-            return <AiOutlineMinus title="Click or press enter to reveal the answer" aria-label='Answer Revealed. Tab to Hear the answer.' />
+             return  <AiOutlineMinus/>
         } else {
-            return <AiOutlinePlus title="Click or Press enter to reveal the answer" aria-label='Click or Press enter to reveal the answer'/>
+            return <AiOutlinePlus/>
         }
     }
+            
+    const screenReaderInstructions = (trivia, index) => {
+        if(isClicked === index) return trivia.answer
+        if(isClicked !== index) return trivia.question + " Press enter to reveal the answer."
+    }        
 
     const accordionClosed = "hidden rounded-2xl overflow-y-hidden max-w-6xl leading-snug opacity-0"
     const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
@@ -31,17 +36,27 @@ const Trivia = () => {
                     TriviaQuestion.map((trivia, index) => (
                         <div key={trivia.question} className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'>
                             <div className='flex items-center justify-between w-full py-5 cursor-pointer'>
-                                <h3 tabIndex="0"  className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-fit'>
-                                    {trivia.question}
-                                </h3>
-                                <button aria-expanded={isClicked === index ? 'true' : false}  onClick={() => revealAnswer(index)}>
-                                    {toggleBtn(index)}
+                                <h3>
+                                <button
+                                    className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-fit'
+                                    id={trivia.headingID}
+                                    aria-label={screenReaderInstructions(trivia, index)} 
+                                    aria-expanded={isClicked === index ? 'true' : false}
+                                    aria-controls={trivia.answerID}
+                                    onClick={() => revealAnswer(index)}>{trivia.question}
                                 </button>
+                                </h3>
+                                <span>
+                                {toggleBtn(index)}
+                                </span>
                             </div>
 
                             {
-                                <div className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
-                                    <p tabIndex={isClicked && "0"} className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
+                                <div 
+                                  id={trivia.answerID}
+                                  aria-labelledby={trivia.headingID}
+                                  className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
+                                  <p tabIndex={isClicked && "0"} className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
                                 </div>
                             }
 
