@@ -56,7 +56,7 @@ const Trivia = () => {
                                   id={trivia.answerID}
                                   aria-labelledby={trivia.headingID}
                                   className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
-                                  <p tabIndex={isClicked && "0"} className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
+                                  <p className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
                                 </div>
                             }
 
