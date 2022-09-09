@@ -29,26 +29,19 @@ const Trivia = () => {
                 text-center font-medium'>Schitt&#39;s Creek Trivia</h2>
                 {
                     TriviaQuestion.map((trivia, index) => (
-                        <div
-                            key={trivia.question}
-                            className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'
-                        >
-
-                            <div 
-                                 className='flex items-center justify-between w-full py-5 cursor-pointer'
-                                >
-                                    <h3 tabIndex="0"  className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-fit'>
+                        <div key={trivia.question} className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'>
+                            <div className='flex items-center justify-between w-full py-5 cursor-pointer'>
+                                <h3 tabIndex="0"  className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-fit'>
                                     {trivia.question}
-                                    </h3>
+                                </h3>
                                 <button aria-expanded={isClicked === index ? 'true' : false}  onClick={() => revealAnswer(index)}>
                                     {toggleBtn(index)}
                                 </button>
                             </div>
 
                             {
-                                <div className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}                                >
+                                <div className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
                                     <p tabIndex={isClicked && "0"} className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
-
                                 </div>
                             }
 
