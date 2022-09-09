@@ -113,13 +113,12 @@ html.dark .accordion {
   justify-content: space-between;
   width: 100%;
   padding: 20px 0px;
-  cursor: pointer;
 }
 
 .accordion-question h3 {
   font-weight: 500;
   font-size: clamp(0.9rem, 3vw, 1rem);
-  width: 86%;
+  width: fit-content;
 }
 
 .accordion-closed {
