@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TriviaQuestion } from './TriviaArray';
+import { TriviaQuestion } from './TriviaData';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 
 const Trivia = () => {
