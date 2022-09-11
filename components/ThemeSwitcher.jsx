@@ -6,6 +6,7 @@ const ThemeSwitcher = () => {
     
     return (
         <button>
+        Toggle Dark Mode
         </button>
     )
 }
