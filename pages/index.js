@@ -1,3 +1,8 @@
+/*
+All imports have been taken care of for you.
+In addition, I went ahead and added the Tailwind styles for the <main>.
+*/
+
 import ThemeSwitcher from '../components/ThemeSwitcher'
 import Trivia from '../components/Trivia'
 import Footer from '../components/Footer'
