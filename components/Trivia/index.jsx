@@ -25,18 +25,18 @@ const Trivia = () => {
            return trivia.answer + "... Press tab to hear the final question.";
         }
 
-        else if(isClicked !== index) {
-            return trivia.question + "... Press enter to reveal the answer."
-        }
-        
         else if(isClicked === index) {
             return trivia.answer + "... Press tab to hear the next question."
         }
+        
+        else {
+            return trivia.question + "... Press enter to reveal the answer."
+        }
     }      
-    
 
     const accordionClosed = "hidden rounded-2xl overflow-y-hidden max-w-6xl leading-snug opacity-0"
     const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
+    
     return (
         <>
             <section id="trivia" className='px-2 pt-10'>
