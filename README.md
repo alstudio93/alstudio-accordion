@@ -1,4 +1,4 @@
-# Let's Make an Accordion with NextJS, Tailwind CSS, and Implement Dark Mode
+# Initial Setup with Boilerplate
 
 Within this branch, you will be find all of the boilerplate already setup for you. All you need to do is clone this repository using the following command in your terminal:
 git clone https://github.com/alstudio93/alstudio-accordion.git ./
