@@ -19,7 +19,7 @@ const ThemeSwitcher = () => {
         <button
             aria-label={resolvedTheme === "light" ? "Press enter to switch to Dark Mode" : "Press enter to switch to Light Mode"}
             type="button"
-            className="flex items-center justify-center w-8 h-8 mx-auto transition-all bg-gray-200 rounded-lg md:w-12 md:h-12 dark:bg-gray-600 hover:ring-2 ring-gray-300 "
+            className="flex items-center justify-center w-10 h-10 mx-auto transition-all bg-gray-200 rounded-lg md:w-12 md:h-12 dark:bg-gray-600 hover:ring-2 ring-gray-300 "
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
             {themeIcon()}
