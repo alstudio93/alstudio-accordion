@@ -1,21 +1,19 @@
-import Head from 'next/head'
+import ThemeSwitcher from '../components/ThemeSwitcher'
 import Trivia from '../components/Trivia'
 import Footer from '../components/Footer'
-import ThemeSwitcher from '../components/ThemeSwitcher'
 
 export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>ALStudio Accordian</title>
-        <meta name="description" content="Accordian designed and developed by ALStudio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <main>
 
-      <main className='py-20'>
+        {/* Light and Dark Mode Toggle */}
         <ThemeSwitcher />
+
+        {/* Trivia Component */}
         <Trivia />
+
       </main>
       <Footer />
     </>
