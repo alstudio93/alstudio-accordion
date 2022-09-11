@@ -20,9 +20,19 @@ const Trivia = () => {
     }
 
     const screenReaderInstructions = (trivia, index) => {
-        if(isClicked === index) return trivia.answer
-        if(isClicked !== index) return trivia.question + " Press enter to reveal the answer."
-    }
+        
+        if(TriviaQuestion.length - 2 === index && index === isClicked){
+           return trivia.answer + "... Press tab to hear the final question.";
+        }
+
+        else if(isClicked === index) {
+            return trivia.answer + "... Press tab to hear the next question."
+        }
+        
+        else {
+            return trivia.question + "... Press enter to reveal the answer."
+        }
+    }      
 
     return (
         <>
