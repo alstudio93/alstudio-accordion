@@ -26,16 +26,56 @@ main {
 
 
 
-
-
 /* ThemeSwitcher Styling */
+html.dark .theme-switcher {
+  background-color: rgb(75, 85, 99)
+}
+
+html.dark .theme-switcher:hover {
+  border: 2px solid white;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0px auto;
+  transition: all 0.05s;
+  background-color: rgb(231, 231, 231);
+  border-radius: 8px;
+}
+
+.theme-switcher:hover {
+  border: 2px solid #000;
+}
 
 
+@media screen and (min-width: 768px) {
+  .theme-switcher {
+    width: 48px;
+    height: 48px;
+  }
+}
 
 
+@media screen and (min-width: 1024px) {
 
+  .light-mode-btn,
+  .dark-mode-btn {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+}
 
 /* Accordian Styling */
+
+#trivia {
+  padding: 40px 10px 0px;
+  margin: 0px auto;
+}
+
 #trivia h2 {
   font-family: 'Quicksand';
   text-align: center;
@@ -46,8 +86,57 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 768px;
+  padding: 8px 20px;
+  margin: 20px auto;
+  box-shadow: 2px 2px 10px -2px rgb(228, 228, 228);
+  column-gap: 20px;
+  border-radius: 16px;
+}
 
+html.dark .accordion {
+  box-shadow: none;
+  border: 1px solid rgb(226, 232, 240);
+}
 
+.accordion-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.accordion-question h3 {
+  font-weight: 500;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  width: fit-content;
+}
+
+.accordion-closed {
+  display: none;
+  border-radius: 16px;
+  overflow-y: hidden;
+  max-width: 1152px;
+  line-height: 1.375;
+  opacity: 0;
+}
+
+.accordion-open {
+  display: block;
+  max-height: 400px;
+  overflow-y: visible;
+  opacity: 1;
+  margin-right: auto;
+}
+
+.accordion p {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
 
 
 /* Footer Styling */
