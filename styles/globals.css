@@ -45,6 +45,8 @@ html.dark .theme-switcher:hover {
   transition: all 0.05s;
   background-color: rgb(231, 231, 231);
   border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 .theme-switcher:hover {
