@@ -20,9 +20,20 @@ const Trivia = () => {
     }
             
     const screenReaderInstructions = (trivia, index) => {
-        if(isClicked === index) return trivia.answer
-        if(isClicked !== index) return trivia.question + " Press enter to reveal the answer."
-    }        
+        
+        if(TriviaQuestion.length - 2 === index && index === isClicked){
+           return trivia.answer + "... Press tab to hear the final question.";
+        }
+
+        else if(isClicked !== index) {
+            return trivia.question + "... Press enter to reveal the answer."
+        }
+        
+        else if(isClicked === index) {
+            return trivia.answer + "... Press tab to hear the next question."
+        }
+    }      
+    
 
     const accordionClosed = "hidden rounded-2xl overflow-y-hidden max-w-6xl leading-snug opacity-0"
     const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
