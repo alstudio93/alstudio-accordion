@@ -38,7 +38,7 @@ const Trivia = () => {
                             <div className='flex items-center justify-between w-full py-5 cursor-pointer'>
                                 <h3>
                                 <button
-                                    className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-full text-left'
+                                    className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-fit'
                                     id={trivia.headingID}
                                     aria-label={screenReaderInstructions(trivia, index)} 
                                     aria-expanded={isClicked === index ? 'true' : false}
