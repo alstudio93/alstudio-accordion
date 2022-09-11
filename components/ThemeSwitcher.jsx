@@ -11,7 +11,7 @@ const ThemeSwitcher = () => {
     const themeIcon = () => {
         if (onComponentMount && resolvedTheme === "dark") {
             return <HiOutlineSun className='lg:text-2xl' />
-        } else {
+        } else if(onComponentMount && resolvedTheme === "light") {
             return <MdOutlineDarkMode className='lg:text-2xl'  />
         }
     }
