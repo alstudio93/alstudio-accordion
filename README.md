@@ -6,7 +6,7 @@ git clone https://github.com/alstudio93/alstudio-accordion.git ./
 You can omit the ./ if you don't mind another folder being created inside of your initial project folder.
 
 After you have cloned the repo, you can then run the terminal command:
-git checkout starting-template-with-tailwind
+git checkout starting-template-without-tailwind
 
 Finally run npm i to install all of the npm packages.
 
