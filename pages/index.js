@@ -1,6 +1,6 @@
+import ThemeSwitcher from '../components/ThemeSwitcher'
 import Trivia from '../components/Trivia'
 import Footer from '../components/Footer'
-import ThemeSwitcher from '../components/ThemeSwitcher'
 
 export default function Home() {
 
