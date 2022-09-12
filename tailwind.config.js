@@ -11,6 +11,8 @@ module.exports = {
       },
       fontSize: {
         'h1': 'clamp(2rem, 7vw, 4rem)',
+        'accordion-question': 'clamp(1.1rem, 3vw, 1.2rem)',
+        'accordion-answer': 'clamp(.95rem, 5vw, 1.1rem)'
 
       },
       fontFamily: {
