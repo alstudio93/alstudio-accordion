@@ -39,35 +39,33 @@ html.dark .theme-switcher:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
   margin: 0px auto;
-  transition: all 0.05s;
   background-color: rgb(231, 231, 231);
   border-radius: 8px;
   border: none;
   cursor: pointer;
 }
 
-.theme-switcher:hover {
-  border: 2px solid #000;
+.theme-switcher svg {
+  font-size: 1.2rem;
 }
 
+.theme-switcher:hover {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+
   .theme-switcher {
     width: 48px;
     height: 48px;
   }
-}
 
-
-@media screen and (min-width: 1024px) {
-
-  .light-mode-btn,
-  .dark-mode-btn {
+  .theme-switcher svg {
     font-size: 1.5rem;
-    line-height: 32px;
   }
 }
 
@@ -82,7 +80,7 @@ html.dark .theme-switcher:hover {
   font-family: 'Quicksand';
   text-align: center;
   font-weight: 500;
-  font-size: clamp(2rem, 7vw, 4rem);
+  font-size: clamp(1.8rem, 10vw, 4rem);
   background: -webkit-linear-gradient(#e1e1e1, #00a0c4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -113,11 +111,19 @@ html.dark .accordion {
   padding: 20px 0px;
 }
 
-.accordion-question h3 {
+.accordion-question button {
   font-weight: 500;
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  width: fit-content;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  line-height: 1.625;
+  font-family: "Nunito";
+  width: 100%;
+  text-align: left;
+  padding-right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
+
 
 .accordion-closed {
   display: none;
@@ -137,7 +143,7 @@ html.dark .accordion {
 }
 
 .accordion p {
-  font-size: clamp(0.9rem, 3vw, 1rem);
+  font-size: clamp(.95rem, 5vw, 1.1rem);
 }
 
 

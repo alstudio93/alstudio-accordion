@@ -1,10 +1,3 @@
-/*
-All imports have been taken care of for you.
-In addition, I provided the trivia ID for basic styling.
-
-Note: The HTML Code &#39; is simply a safer way of providing apostrophes since platforms like Vercel will prevent deployment if you add one using the keyboard character.
-*/
-
 import React, { useState } from 'react'
 import { TriviaQuestion } from './TriviaData';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
@@ -14,10 +7,40 @@ const Trivia = () => {
     return (
         <>
             <section id="trivia">
-                <h2 className="">Schitt&#39;s Creek Trivia</h2>
-                
+                <h2 >Schitt&#39;s Creek Trivia</h2>
+                {
+                    TriviaQuestion.map((trivia, index) => (
+                        <div key={trivia.question} className='accordion'>
+                            <div className='accordion-question'>
+
+                                <h3>
+                                    <button>{trivia.question}</button>
+                                </h3>
+
+                                <span>
+                                    Icons
+                                </span>
+
+                            </div>
+                            {
+                                <div 
+                                    // className={isClicked === index ? "accordion-open" : "accordion-closed"}
+                                >
+                                    <p>{trivia.answer}</p>
+                                </div>
+                            }
+                        </div>
+                ))}
             </section>
         </>
     )
 }
 export default Trivia
+
+
+
+
+
+
+
+
