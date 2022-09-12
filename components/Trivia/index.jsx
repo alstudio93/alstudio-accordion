@@ -49,7 +49,7 @@ const Trivia = () => {
                             <div className='flex items-center justify-between w-full py-5 cursor-pointer'>
                                 <h3>
                                 <button
-                                    className='font-medium text-[0.95rem] md:text-lg leading-relaxed font-nunito w-full text-left px-1'
+                                    className='font-medium text-accordion-question leading-relaxed font-nunito w-full text-left pr-5'
                                     id={trivia.headingID}
                                     aria-label={screenReaderInstructions(trivia, index)} 
                                     aria-expanded={isClicked === index ? 'true' : false}
@@ -63,12 +63,12 @@ const Trivia = () => {
                             </div>
 
                             {
-                                <div 
+                                <section 
                                   id={trivia.answerID}
                                   aria-labelledby={trivia.headingID}
                                   className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
-                                  <p className='font-normal text-[0.9rem] sm:text-base'>{trivia.answer}</p>
-                                </div>
+                                  <p className='font-normal text-accordion-answer'>{trivia.answer}</p>
+                                </section>
                             }
 
                         </div>
