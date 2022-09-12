@@ -57,12 +57,12 @@ const Trivia = () => {
                                 </span>
                             </div>
                             {
-                                <div 
+                                <section 
                                 id={trivia.answerID}
                                 aria-labelledby={trivia.headingID}
                                 className={isClicked === index ? "accordion-open" : "accordion-closed"}>
                                     <p>{trivia.answer}</p>
-                                </div>
+                                </section>
                             }
                         </div>
                 ))}
