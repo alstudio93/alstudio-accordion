@@ -5,7 +5,7 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 const Trivia = () => {
 
     const accordionClosed = "hidden rounded-2xl overflow-y-hidden max-w-6xl leading-snug opacity-0"
-    const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto font-normal text-accordion-answer"
+    const accordionOpen = "block max-h-[400px] overflow-y-visible opacity-100 mr-auto"
     
     return (
         <>
@@ -17,24 +17,24 @@ const Trivia = () => {
                     TriviaQuestion.map((trivia, index) => (
                         <div key={trivia.question} className='flex flex-col items-center max-w-3xl px-5 py-2 mx-auto my-5 shadow-lg gap-x-5 dark:shadow-none dark:border dark:border-slate-200 rounded-2xl'>
                             <div className='flex items-center justify-between w-full py-5 cursor-pointer'>
+                                
+                                {/* Accordion Question */}
                                 <h3>
-                                <button
-                                    className='w-full pr-6 font-medium leading-relaxed text-left text-accordion-question font-nunito'
-                                >
-                                    {trivia.question}
-                                </button>
+                                    <button className='font-medium text-accordion-question leading-relaxed font-nunito w-full text-left pr-5'>
+                                        {trivia.question}
+                                    </button>
                                 </h3>
                                 <span>
-                                Icons
+                                {/* Icons go here */}
                                 </span>
                             </div>
 
+                            {/* Accordion Answer */}
                             {
-                                
-                                  <p>{trivia.answer}</p>
-                                  
+                                <section>
+                                  <p className='font-normal text-accordion-answer'>{trivia.answer}</p>
+                                </section>
                             }
-
                         </div>
                     ))}
             </section>
