@@ -43,21 +43,21 @@ const Trivia = () => {
                         <div key={trivia.question} className='accordion'>
                             <div className='accordion-question'>
                                 <h3>
-                                <button
-                                    id={trivia.headingID}
-                                    aria-label={screenReaderInstructions(trivia, index)} 
-                                    aria-expanded={isClicked === index ? 'true' : false}
-                                    aria-controls={trivia.answerID}
-                                    onClick={() => revealAnswer(index)}>{trivia.question}
-                                    
-                                </button>
+                                    <button
+                                        id={trivia.headingID}
+                                        aria-label={screenReaderInstructions(trivia, index)} 
+                                        aria-expanded={isClicked === index ? 'true' : false}
+                                        aria-controls={trivia.answerID}
+                                        onClick={() => revealAnswer(index)}>{trivia.question}
+                                        
+                                    </button>
                                 </h3>
                                 <span>
-                                {toggleBtn(index)}
+                                    {toggleBtn(index)}
                                 </span>
                             </div>
                             {
-                                <section
+                                <section 
                                 id={trivia.answerID}
                                 aria-labelledby={trivia.headingID}
                                 className={isClicked === index ? "accordion-open" : "accordion-closed"}>
