@@ -5,14 +5,14 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 const Trivia = () => {
     const [isClicked, setIsClicked] = useState(null);
     const revealAnswer = index => {
-        if (isClicked === index) {
+        if (index === isClicked) {
             return setIsClicked(null);
         }
         setIsClicked(index);
     }
 
     const toggleBtn = (index) => {
-        if (isClicked === index) {
+        if (index === isClicked) {
              return  <AiOutlineMinus/>
         } else {
             return <AiOutlinePlus/>
@@ -21,11 +21,11 @@ const Trivia = () => {
             
     const screenReaderInstructions = (trivia, index) => {
         
-        if(TriviaQuestion.length - 2 === index && index === isClicked){
+        if(index === TriviaQuestion.length - 2 && index === isClicked){
            return trivia.answer + "... Press tab to hear the final question.";
         }
 
-        else if(isClicked === index) {
+        else if(index === isClicked) {
             return trivia.answer + "... Press tab to hear the next question."
         }
         
@@ -66,7 +66,7 @@ const Trivia = () => {
                                 <section 
                                   id={trivia.answerID}
                                   aria-labelledby={trivia.headingID}
-                                  className={isClicked === index ? accordionClosed && accordionOpen : accordionClosed}>
+                                  className={isClicked === index ? accordionOpen : accordionClosed}>
                                   <p className='font-normal text-accordion-answer'>{trivia.answer}</p>
                                 </section>
                             }
